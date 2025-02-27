@@ -1,6 +1,6 @@
 async function fetchProducts() {
   try {
-    let response = await fetch("https://dummyjson.com/product"); // Замените на актуальный API
+    let response = await fetch("https://dummyjson.com/product");
     let products = await response.json();
 
     const container = document.getElementById("product-container");
@@ -17,7 +17,7 @@ async function fetchProducts() {
       container.appendChild(card);
     });
   } catch (error) {
-    console.error("Ошибка загрузки данных:", error);
+    console.error("XatoS:", error);
   }
 }
 fetchProducts();
