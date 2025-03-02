@@ -2,7 +2,7 @@ async function fetchProducts() {
   try {
     let response = await fetch("https://dummyjson.com/product");
     let products = await response.json();
-
+const url = "https://dummyjson.com/product";
     const container = document.getElementById("product-container");
     container.innerHTML = "";
     products.forEach((product) => {
@@ -20,4 +20,16 @@ async function fetchProducts() {
     console.error("XatoS:", error);
   }
 }
+
+fetch(url)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    showData(data);
+  });
+  .catch((error) => {
+    console.error(error);
+  });
+
 fetchProducts();
